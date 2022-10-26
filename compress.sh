@@ -33,7 +33,7 @@ echo "---------------------------------"
 
 for(( i=0;i<${#arr_videos[@]};i++)) do
     file_name=${arr_videos[i]##*/}
-    file_pure_name=${file_name%%.*}
+    file_pure_name=${file_name%.*}
     file_father_path=${arr_videos[i]%/*}
     file_output="${file_father_path}/${file_pure_name}${ENDWITH}"
     echo "Compressing ${#arr_videos[@]} of num `expr $i + 1` video : ${arr_videos[i]}"
